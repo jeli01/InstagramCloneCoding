@@ -1,0 +1,224 @@
+.blind {
+  display : none;
+}
+
+body {
+  background-color: rgba(var(--b3f,250,250,250),1);
+}
+
+a {
+  text-decoration: none;
+}
+
+#overallFlexbox {
+  display: flex;
+  flex-direction: column;
+  height : 100vh;
+}
+
+main {
+  padding-top: 50px;
+  flex-grow: 1;
+  display : flex;
+  justify-content: center;
+}
+
+article {
+  display : flex;
+  justify-content : center;
+}
+
+#image-layout-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#image-layout {
+  width : 380px;
+  height: 511px;
+  background-image: url("./image/예시사진 레이아웃.png");
+  background-size: 380px 511px;
+  margin-right: 32px;
+  margin-bottom: 12px;
+  display : flex;
+}
+
+#login-layout-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#login-layout {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(var(--b6a,219,219,219),1);
+  background-color: white;
+  width: 350px;
+  height: 382px;
+}
+
+#login-layout-logo {
+  display: flex;
+  justify-content : center;
+}
+
+#insta-logo-img {
+  background-image: url("./image/image_bundle.png");
+  background-position: 0px 270px;
+  width: 175px;
+  height: 51px;
+}
+
+#login-layout form {
+  display : flex;
+  flex-direction : column;
+}
+
+#id-layout {
+  display: flex;
+  justify-content : center;
+  height: 38px;
+  margin-bottom: 6px;
+}
+
+#input-id {
+  background-color: rgba(var(--b3f,250,250,250),1);
+  border-color: rgb(247, 247, 245);
+  width: 262px;
+  height: 40px;
+  padding: 9px 0px 7px 8px;
+}
+
+#pwd-layout {
+  display: flex;
+  justify-content : center;
+  margin-bottom: 6px;
+  padding: 5px;
+}
+
+#input-pwd {
+  background-color: rgba(var(--b3f,250,250,250),1);
+  border-color: rgb(247, 247, 245);
+  width: 262px;
+  height: 40px;
+  padding: 9px 0px 7px 8px;
+}
+
+#login-button-layout {
+  display: flex;
+  justify-content : center;
+  margin-bottom: 8px;
+}
+
+#login-button {
+  width: 268px;
+  height: 30px;
+  background-color: powderblue;
+  color: white;
+  border: none;
+}
+
+#or-layout {
+  display: flex;
+  justify-content : center;
+  height: 15px;
+  margin: 10px 40px 18px 40px;
+}
+
+.line {
+  height: 1px;
+  background-color: rgba(var(--b38,219,219,219),1);
+  margin-top: 8px;
+  flex-grow: 1;
+}
+
+#or {
+  margin : 0px 15px 0px 15px;
+  font-size: 13px;
+  color: rgba(var(--f52,142,142,142),1);
+}
+
+#facebook-login-href {
+  display : flex;
+  justify-content : center;
+}
+
+#facebook-icon {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background-image: url(./image/image_bundle.png);
+  background-position: -413px -259px;
+  vertical-align: bottom;
+}
+
+#forget-pwd-href {
+  text-align : center;
+  font-size : 12px;
+  margin-top : 15px;
+}
+
+#sign-up-layout {
+  border: 1px solid rgba(var(--b6a,219,219,219),1);
+  background-color: white;
+  margin: 20px 0px 10px 0px;
+  width: 350px;
+  height: 63px;
+  text-align: center;
+  line-height: 63px;
+  font-size : 14px;
+}
+
+#sign-up-href {
+  color : #0095f6;
+  font-weight : bold;
+}
+
+#down-href {
+  display : flex;
+  justify-content : center;
+  margin : 10px 0px 10px 0px;
+}
+
+#down-href img {
+  width: 136px;
+  height: 40px;
+  margin: 5px;
+}
+
+#app-down-layout {
+  display: flex;
+  flex-direction : column;
+}
+
+#down-explain {
+  text-align : center;
+  margin : 10px 20px 10px 20px;
+  font-size : 14px;
+}
+
+footer {
+  flex-basis: 157px;
+  padding-bottom: 30px;
+}
+
+#footer-flexbox, #footer-flexbox2, #footer-flexbox3 {
+  display : flex;
+  justify-content : center;
+}
+
+footer ul{
+  list-style: none;
+}
+
+footer ul li {
+  font-size: 12px;
+  margin-right: 15px;
+}
+
+#footer-of-footer {
+  font-size: 12px;
+  margin-left: 15px;
+}
