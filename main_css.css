@@ -2,6 +2,14 @@
   display : none;
 }
 
+input:focus {
+  outline: none;
+}
+
+.bold-word {
+  font-weight: bold;
+}
+
 a {
   text-decoration: none;
 }
@@ -54,6 +62,8 @@ header {
 
 #search-box input {
   background-color : rgba(var(--bb2,239,239,239),1);
+  border-radius : 8px;
+  border: none;
   width: 268px;
   height: 36px;
 }
@@ -135,7 +145,6 @@ section {
 #post-bundle {
   width: 612px;
   background-color: white;
-  border: 1px solid #dbdbdb;
 }
 
 aside {
@@ -248,6 +257,11 @@ aside {
   line-height: 35px;
 }
 
+.pb-main {
+  margin-bottom : 40px;
+  border: 1px solid #dbdbdb;
+}
+
 .pb-main-header {
   display : flex;
   width:100%;
@@ -302,4 +316,63 @@ aside {
   justify-content: flex-end;
   width: 100%;
   padding-right: 15px;
+}
+
+.pb-main-whoislove {
+  display : flex;
+  padding : 20px 0px 10px 16px;
+}
+
+.pb-main-whoislove img {
+  width: 20px;
+  height: 20px;
+  padding-right: 10px;
+}
+
+.pb-main-whoislove-explain {
+  font-size : 14px;
+}
+
+.pb-main-viewcomment {
+  padding-left: 16px;
+  font-size: 14px;
+  color: #8e8e8e;
+}
+
+.pb-main-time {
+  padding : 8px 0px 16px 16px;
+  font-size : 10px;
+  border-bottom: 1px solid #dbdbdb;
+  color: #8e8e8e;
+
+}
+
+.pb-main-writecomment {
+  padding: 15px 10px 15px 16px;
+  display: flex;
+}
+
+.pb-main-write-comment-emo {
+  width: 25px;
+  height: 25px;
+  background-image: url("./image/background01.png");
+  background-position: -187px -202px;
+}
+
+.pb-main-write-comment-core {
+  margin-left: 15px;
+}
+.pb-main-write-comment-core input {
+  width: 490px;
+  border: none;
+  color: #8e8e8e;
+}
+
+.pb-main-write-comment-button button {
+  width: 50px;
+  height: 25px;
+  color: powderblue;
+  border: none;
+  background-color: white;
+  padding: 0px;
 }
