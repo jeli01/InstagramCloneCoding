@@ -38,7 +38,7 @@ article {
   width : 380px;
   height: 511px;
   background-image: url("./image/예시사진 레이아웃.png");
-  background-size: 380px 511px;
+  background-size: contain;
   margin-right: 32px;
   margin-bottom: 12px;
   display : flex;
