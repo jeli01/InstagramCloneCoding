@@ -10,6 +10,10 @@ input:focus {
   font-weight: bold;
 }
 
+.font-red {
+  color: red;
+}
+
 a {
   text-decoration: none;
 }
@@ -311,6 +315,15 @@ aside {
   width: 200px;
 }
 
+.pb-main button {
+  border:none;
+  background-color: white;
+}
+
+.pb-main-icons button:hover {
+  opacity: 0.4;
+}
+
 .pb-main-icons-inner2 {
   display: flex;
   justify-content: flex-end;
@@ -337,6 +350,13 @@ aside {
   padding-left: 16px;
   font-size: 14px;
   color: #8e8e8e;
+}
+
+.pb-main-viewcomment button {
+  padding: 0px;
+  width: 570px;
+  text-align: left;
+  background-color: white;
 }
 
 .pb-main-time {
@@ -376,3 +396,52 @@ aside {
   background-color: white;
   padding: 0px;
 }
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#list-modal-box {
+  border-radius: 15px;
+  background-color: white;
+}
+
+#list-modal-box div {
+  width: 384px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+#list-modal-box #list-modal-box-inner-final-box {
+  border: none;
+}
+
+#list-modal-box #list-modal-box-inner-final-box button {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+#list-modal-box #list-modal-box-inner-first-box button{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#list-modal-box button {
+  padding: 0px 0px 0px 0px;
+  width: 100%;
+  height: 45px;
+  border: none;
+  background-color: white;
+}
+
+
