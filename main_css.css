@@ -447,7 +447,7 @@ aside {
 #comment-modal-box {
   display: flex;
   flex-direction : row;
-  width: 800px;
+  width: 900px;
   height: 530px;
   margin: 0;
   padding: 0;
@@ -470,9 +470,37 @@ aside {
 #comment-modal-box-right {
   margin: 0;
   padding: 0;
-  width: 270px;
+  width: 370px;
   height: 100%;
   background-color: white;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+}
+
+.comment-modal-box-header {
+  display : flex;
+  flex-direction : row;
+}
+
+.comment-modal-box-main {
+  height : 320px;
+}
+
+#modal-comment-container button {
+  border:none;
+  background-color: white;
+}
+
+#comment-modal-box .pb-main-write-comment-core input{
+  width: 250px;
+}
+
+#cancle-button {
+  width: 24px;
+  height: 24px;
+  background-image : url(./image/image_bundle.png);
+  background-position : 24px 192px;
+  position: fixed;
+  top: 7px;
+  right: 7px;
 }
