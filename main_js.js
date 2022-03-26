@@ -5,9 +5,9 @@ $modalContainer2 = document.querySelector('.modal-container#modal-comment-contai
 $heartButton = document.querySelector('#heart-button');
 $commentButton = document.querySelector('#comment-button');
 $heartImage = document.querySelector('#heart-image');
-$cancleButton = document.querySelector('#cancle-button');
-let image_flag = 0;                                                               // dom 객체 받아오기
-
+$cancleButton = document.querySelector('.cancle-button');        // dom 객체 받아오기
+$modalCommentForm = document.querySelector('.modal-comment-form');
+                                                             
 $pbMainHeaderList.addEventListener('click', () => {                               // 클릭하면 모달창 나오게
   $modalContainer1.style.display = "flex";
 });
@@ -29,6 +29,7 @@ $modalContainer1.addEventListener('click', (event) => {                      // 
     $modalContainer1.style.display = "none";
 });
 
+let image_flag = 0;  
 $heartButton.addEventListener('click', () => {                            // 하트 클릭 색깔 변하기 구현!!
   if(image_flag == 0) {
     $heartImage.src = "./image/heart_red.png";
@@ -39,4 +40,36 @@ $heartButton.addEventListener('click', () => {                            // 하
     image_flag = 0;
   }
 })
+          
+$modalCommentForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if($modalCommentForm.children[1].children[0].value == '') {
+    return;
+  }
 
+  $commentBoxElement = $modalCommentForm.parentNode.children[1].children[0];
+  const $newCommentContainer = document.createElement("div");
+  $newCommentContainer.className = 'comment-modal-box-main-comment'
+
+  const $profile = document.createElement("div");
+  $profile.className = 'pb-main-header-profile';
+  const $img = document.createElement("img");
+  $img.setAttribute('src',"./image/기본프로필사진.jpg");
+  $profile.append($img);
+
+  const $nickname = document.createElement("div");
+  $nickname.className = 'pb-main-header-nickname';
+  $nickname.append('songjaemin178');
+
+  const $comment = document.createElement("div");
+  $comment.className = 'comment-modal-box-main-comment-text';
+  $comment.append($modalCommentForm.children[1].children[0].value);
+
+  $newCommentContainer.append($profile);
+  $newCommentContainer.append($nickname);
+  $newCommentContainer.append($comment);
+
+  $commentBoxElement.append($newCommentContainer);
+  $modalCommentForm.children[1].children[0].value = '';
+  $modalCommentForm.children[1].children[0].focus();
+})

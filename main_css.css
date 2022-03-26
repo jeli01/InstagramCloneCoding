@@ -480,10 +480,18 @@ aside {
 .comment-modal-box-header {
   display : flex;
   flex-direction : row;
+  padding: 10px;
 }
 
 .comment-modal-box-main {
-  height : 320px;
+  height : 280px;
+  padding: 10px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+
+.comment-modal-box-main::-webkit-scrollbar{
+   display:none; 
 }
 
 #modal-comment-container button {
@@ -495,7 +503,7 @@ aside {
   width: 250px;
 }
 
-#cancle-button {
+.cancle-button {
   width: 24px;
   height: 24px;
   background-image : url(./image/image_bundle.png);
@@ -503,4 +511,24 @@ aside {
   position: fixed;
   top: 7px;
   right: 7px;
+}
+
+.comment-modal-box-main-comment-bundle {
+  display : flex;
+  flex-direction : column;
+}
+
+.comment-modal-box-main-comment {
+  display : flex;
+  flex-direction : row;
+  padding-bottom : 5px;
+}
+
+.comment-modal-box-main .pb-main-header-nickname {
+  width: 120px;
+}
+
+.comment-modal-box-main .comment-modal-box-main-comment-text {
+  font-size : 14px;
+  line-height: 36px;
 }
