@@ -444,4 +444,35 @@ aside {
   background-color: white;
 }
 
+#comment-modal-box {
+  display: flex;
+  flex-direction : row;
+  width: 800px;
+  height: 530px;
+  margin: 0;
+  padding: 0;
+  
+}
 
+#comment-modal-box-left {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 530px;
+  height: 100%;
+  background-image : url(./image/예시사진2.png);
+  background-color : gray;
+  background-size : 100% 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+#comment-modal-box-right {
+  margin: 0;
+  padding: 0;
+  width: 270px;
+  height: 100%;
+  background-color: white;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
