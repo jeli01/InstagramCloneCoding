@@ -9,10 +9,8 @@ app.get('/', (req, res) => { //express 앱(app)을 넣고, root directory에 오
   res.sendFile(__dirname + '/login.html'); //"Hello World!" 를 출력되게 해준다.
 });
 
-app.get('/main', (req, res) => {
+app.post('/main', (req, res) => {
   res.sendFile(__dirname + '/main.html');
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-}) //포트 3000번에서 이 앱을 실행한다.
+app.listen(port) //포트 3000번에서 이 앱을 실행한다.

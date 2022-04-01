@@ -41,7 +41,7 @@ $heartButton.addEventListener('click', () => {                            // 하
   }
 })
           
-$modalCommentForm.addEventListener('submit', (e) => {
+$modalCommentForm.addEventListener('submit', (e) => {                           // 댓글 달기
   e.preventDefault();
   if($modalCommentForm.children[1].children[0].value == '') {
     return;
