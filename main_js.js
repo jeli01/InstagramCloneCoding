@@ -2,11 +2,12 @@ $pbMainHeaderList = document.querySelector(".pb-main-header-list");
 $listModalBoxInnerFinalBoxButton = document.querySelector('#list-modal-box-inner-final-box button');
 $modalContainer1 = document.querySelector('.modal-container#modal-list-container');
 $modalContainer2 = document.querySelector('.modal-container#modal-comment-container');
-$heartButton = document.querySelector('#heart-button');
+$heartButton = document.querySelectorAll('.heart-button');
 $commentButton = document.querySelector('#comment-button');
-$heartImage = document.querySelector('#heart-image');
+$heartImage = document.querySelectorAll('.heart-image');
 $cancleButton = document.querySelector('.cancle-button');        // dom 객체 받아오기
 $modalCommentForm = document.querySelector('.modal-comment-form');
+$loveNumber = document.querySelectorAll('.love-number');
                                                              
 $pbMainHeaderList.addEventListener('click', () => {                               // 클릭하면 모달창 나오게
   $modalContainer1.style.display = "flex";
@@ -30,15 +31,18 @@ $modalContainer1.addEventListener('click', (event) => {                      // 
 });
 
 let image_flag = 0;  
-$heartButton.addEventListener('click', () => {                            // 하트 클릭 색깔 변하기 구현!!
-  if(image_flag == 0) {
-    $heartImage.src = "./image/heart_red.png";
-    image_flag = 1;
-  }
-  else {
-    $heartImage.src = "./image/heart.png";
-    image_flag = 0;
-  }
+
+$heartButton[1].addEventListener('click', () => {                            // 하트 클릭 색깔변하기 구현!!
+    if(image_flag == 0) {
+      $heartImage[1].src = "./image/heart_red.png";
+      image_flag = 1;
+      $loveNumber[1].innerText = +$loveNumber[1].innerText +Number(1);
+    }
+    else {
+      $heartImage[1].src = "./image/heart.png";
+      image_flag = 0;
+      $loveNumber[1].innerText = +$loveNumber[1].innerText -Number(1);;
+    }
 })
           
 $modalCommentForm.addEventListener('submit', (e) => {                           // 댓글 달기
