@@ -33,6 +33,22 @@ $modalContainer1.addEventListener('click', (event) => {                      // 
 let image_flag = 0;  
 
 $heartButton[1].addEventListener('click', () => {                            // 하트 클릭 색깔변하기 구현!!
+    fetch('/main/test', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        title: "Test",
+        body: "I am testing!",
+        userId: 1,
+      }),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => console.log(typeof data))
+    
     if(image_flag == 0) {
       $heartImage[1].src = "./image/heart_red.png";
       image_flag = 1;
@@ -76,4 +92,6 @@ $modalCommentForm.addEventListener('submit', (e) => {                           
   $commentBoxElement.append($newCommentContainer);
   $modalCommentForm.children[1].children[0].value = '';
   $modalCommentForm.children[1].children[0].focus();
+
+
 })

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="./image/favicon.png">
+  <link rel="stylesheet" href="./signUp.css">
+  <title>instagram</title>
+</head>
+<body>
+  <article>
+    <div id="login-layout-container">
+      <div id="login-layout">
+        <div id="login-layout-logo">
+          <h1 id="insta-logo-img">
+            <span class="blind">Instagram</span>
+          </h1>
+        </div>
+        
+        <form action ="/main" method="post">
+            <div id="id-layout">
+                <label><span class="blind">휴대폰 번호 또는 이메일 주소</span>
+                <input type="text" name="id" id="input-id" placeholder="휴대폰 번호 또는 이메일 주소"> </label>
+            </div>
+            <div class="pwd-layout">
+                <label><span class="blind">성명</span>
+                    <input type="password" name = "pwd" class="input-pwd" placeholder="성명"> </label>
+            </div>
+            <div class="pwd-layout">
+              <label><span class="blind">사용자 이름</span>
+                  <input type="password" name = "pwd" class="input-pwd" placeholder="사용자 이름"> </label>
+            </div>
+            <div class="pwd-layout">
+              <label><span class="blind">비밀번호</span>
+                  <input type="password" name = "pwd" class="input-pwd" placeholder="비밀번호"> </label>
+            </div>
+            <div id="login-button-layout">
+                <input id="login-button"password type="submit" value="가입">
+            </div>
+        </form>
+      
+        <div id="or-layout">
+            <div class="line"></div>
+            <div id="or">또는</div>
+            <div class="line"></div>
+        </div>
+        
+        <div id="facebook-login-href"><a href = "https://www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26state%3D%257B%2522fbLoginKey%2522%253A%2522wgfglajyu1a1f0nits1uxujnuzmzbdr1ykit0810p9phsgojk%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%26scope%3Demail%26response_type%3Dcode%252Cgranted_scopes%26locale%3Dko_KR%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D51cd1791-ac6f-43d0-88a6-d25cae62bcb5%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%2522wgfglajyu1a1f0nits1uxujnuzmzbdr1ykit0810p9phsgojk%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%23_%3D_&display=page&locale=ko_KR&pl_dbl=0">
+            <div><div id="facebook-icon"></div> Facebook으로 로그인</div></a></div>
+      </div>
+
+      <div id="sign-up-layout">계정이 있으신가요? <a href=""><span id="sign-up-href">로그인</span></a></div>
+      
+      <div id="app-down-layout">
+        <div id="down-explain">앱을 다운로드하세요.</div>
+        <div id="down-href"> <a href="https://l.instagram.com/?u=https%3A%2F%2Fitunes.apple.com%2Fapp%2Finstagram%2Fid389801252%3Fpt%3D428156%26ct%3Digweb.loginPage.badge%26mt%3D8%26vt%3Dlo&e=ATM28zXtIlao1CQOtStWWGhv71rdWLvQ9Enu6ZSzm9E93l6JyMOXzDWWPoISaS0CxGR-UZF8iXHxiCLP&s=1">
+            <img src="./image/AppStoreDown.png"><span class="blind">AppStore다운로드</span></a> 
+            <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb&utm_campaign=loginPage&ig_mid=E194A715-EE8D-4902-BEA3-732A5EED6A55&utm_content=lo&utm_medium=badge">
+              <img src="./image/GooglePlayDown.png"><span class="blind">GooglePlay 다운로드</span></a></div>
+      </div>
+    </div>
+  </article>
+  <footer>
+    <ul id="footer-flexbox">
+        <li><a href="">Meta</a></li>
+        <li><a href="">소개</a></li>
+        <li><a href="">블로그</a></li>
+        <li><a href="">채용 정보</a></li>
+        <li><a href="">도움말</a></li>
+        <li><a href="">API</a></li>
+        <li><a href="">개인정보처리방침</a></li>
+        <li><a href="">약관</a></li>
+        <li><a href="">인기 계정</a></li>
+        <li><a href="">해시태그</a></li>
+        <li><a href="">위치</a></li>
+    </ul>
+    <ul id="footer-flexbox2">
+        <li><a href="">댄스</a></li>
+        <li><a href="">식음료</a></li>
+        <li><a href="">집 및 정원</a></li>
+        <li><a href="">음악</a></li>
+        <li><a href="">시각 예술</a></li>
+    </ul>
+
+    <div id="footer-flexbox3">
+        <div class="blind">한국어</div>
+        <select>
+                <option>한국어</option>
+                <option>일본어</option>
+                <option>중국어</option>
+                <option>영어</option>
+                <option>잼민어</option>
+        </select>
+        <div id="footer-of-footer">© 2022 Instagram from Meta</div>
+    </div>
+</footer>
+</body>
+</html>
