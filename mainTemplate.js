@@ -1,5 +1,7 @@
+const db = require("./sql");
+
 let html = {
-  main: function () {
+  main: function (pbMain, feedData) {
     return `<!DOCTYPE html>
     <html>
     <head>
@@ -41,30 +43,7 @@ let html = {
               </div>
             </div>
             <div id="post-bundle">
-                  <div class="pb-main">
-                  <div class="pb-main-header">
-                    <div class="pb-main-header-profile"><img src="./image/기본프로필사진.jpg"></div>
-                    <div class="pb-main-header-nickname">Winter</div>
-                    <div class="pb-main-header-list"><button><img src="./image/more.png"></button></div>
-                  </div>
-                  <div class="pb-main-img"><img src="./image/examplePicture2.png"></div>
-                  <div class="pb-main-icons">
-                    <div class="pb-main-icons-inner1">
-                      <button class="heart-button"><img src="./image/heart.png" class="heart-image"></button>
-                      <button id="comment-button"><img src="./image/comment.png"></button>
-                      <button><img src="./image/direct.png"></button>
-                    </div>
-                    <div class="pb-main-icons-inner2"><button><img src="./image/bookmark.png"></button></div>
-                  </div>
-                  <div class="pb-main-whoislove"><img src="./image/기본프로필사진.jpg"> <div class="pb-main-whoislove-explain"><span class="bold-word">Kim_Tae_Ri</span>님  <span class="bold-word">외 <span class="love-number">3</span>명</span>이 좋아합니다.</div></div>
-                  <div class="pb-main-viewcomment">댓글 1개 보기</div>
-                  <div class="pb-main-time">16시간 전</div>
-                  <form class="pb-main-writecomment">
-                    <div class="pb-main-write-comment-emo"></div>
-                    <div class="pb-main-write-comment-core"><input placeholder="댓글 달기..."></div>
-                    <div class="pb-main-write-comment-button"><button>게시</button></div>
-                  </form>
-                  </div>
+              ${pbMain}
             </div>
           </article>
     
@@ -100,7 +79,7 @@ let html = {
                   <div class="asider-recommend-main-list">
                     <div><img src="./image/기본프로필사진.jpg"></div>
                     <div class="recommend-main-secondbox">
-                      <div class="recommend-list-font1">ImHappyHappy</div>
+                     <div class="recommend-list-font1">ImHappyHappy</div>
                       <div class="recommend-list-font2">Tony_Stark_Iron님이 팔로우합니다</div>
                     </div>
                     <div class="recommend-list-font3"><a href="" class="blue-color-change">팔로우</a></div>
@@ -112,7 +91,7 @@ let html = {
                       <div class="recommend-list-font2">I_Can_Do님이 팔로우합니다</div>
                     </div>
                     <div class="recommend-list-font3"><a href="" class="blue-color-change">팔로우</a></div>
-                  </div>
+                  </div> 
                 </div>
               </div>
               <div id="aside-footer">
@@ -192,7 +171,41 @@ let html = {
       </script>
     </body>
     </html>`;
+  },
+  pbMain: function(feedData) {
+      let body = ``;
+      for(let i = 0 ; i < 4 ; i++) {
+        body += `
+        <div class="pb-main">
+          <div class="pb-main-header">
+            <div class="pb-main-header-profile"><img src="./image/기본프로필사진.jpg"></div>
+            <div class="pb-main-header-nickname">Winter</div>
+            <div class="pb-main-header-list"><button><img src="./image/more.png"></button></div>
+          </div>
+          <div class="pb-main-img"><img src="${feedData[i].img_path}"></div>
+          <div class="pb-main-icons">
+            <div class="pb-main-icons-inner1">
+              <button class="heart-button"><img src="./image/heart.png" class="heart-image"></button>
+              <button id="comment-button"><img src="./image/comment.png"></button>
+              <button><img src="./image/direct.png"></button>
+            </div>
+            <div class="pb-main-icons-inner2"><button><img src="./image/bookmark.png"></button></div>
+          </div>
+          <div class="pb-main-whoislove"><img src="./image/기본프로필사진.jpg"> <div class="pb-main-whoislove-explain"  class="bold-word">Kim_Tae_Ri</span>님  <span class="bold-word">외 <span class="love-number">${feedData[i].like}</span>명</span>이 좋아합니다.</div></div>
+          <div class="pb-main-viewcomment">댓글 1개 보기</div>
+          <div class="pb-main-time">16시간 전</div>
+          <form class="pb-main-writecomment">
+            <div class="pb-main-write-comment-emo"></div>
+            <div class="pb-main-write-comment-core"><input placeholder="댓글 달기..."></div>
+            <div class="pb-main-write-comment-button"><button>게시</button></div>
+          </form>
+        </div>
+      `
+    }
+    return body;
   }
 }
+
+
 
 module.exports = html;

@@ -15,11 +15,15 @@ app.get('/', (req, res) => {         // 로그인 페이지 라우트!
 });
 
 app.post('/main', (req, res) => {    // 메인 페이지 라우트!
-  res.send(html.main());
+  db.query('SELECT * FROM feed', function(err,feedData) {
+    pbMain = html.pbMain(feedData);
+    res.send(html.main(pbMain,feedData));
+  })
 });
 
 app.post('/main/test', (req,res) => {
   let a = req.body;
+  console.log(a);
   data = {
     id : 'jeli01',
     password : '1234',

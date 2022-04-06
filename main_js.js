@@ -47,7 +47,7 @@ $heartButton[1].addEventListener('click', () => {                            // 
       .then((response) => {
         return response.json();
       })
-      .then((data) => console.log(typeof data))
+      .then((data) => console.log(data))
     
     if(image_flag == 0) {
       $heartImage[1].src = "./image/heart_red.png";
