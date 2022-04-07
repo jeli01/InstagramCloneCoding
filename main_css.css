@@ -535,3 +535,16 @@ aside {
   font-size : 14px;
   line-height: 36px;
 }
+
+.comment-remove {
+  font-size : 14px;
+  line-height: 36px;
+  color: powderblue;
+  float: right;
+  width: 28px;
+  height: 36px;
+}
+
+.comment-id {
+  display: none;
+}

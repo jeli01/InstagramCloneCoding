@@ -141,7 +141,7 @@ let html = {
                 <div class="comment-modal-box-main-comment">
                   <div class="pb-main-header-profile"><img src="./image/기본프로필사진.jpg"></div>
                   <div class="pb-main-header-nickname">Winter</div>
-                  <div class="comment-modal-box-main-comment-text"> 댓글내용 댓글내용 </div>
+                  <div class="comment-modal-box-main-comment-text" id="cmbmct-postContent"> 댓글내용 댓글내용 </div>
                 </div>
               </div>
             </div>
@@ -177,6 +177,7 @@ let html = {
       for(let i = 0 ; i < 4 ; i++) {
         body += `
         <div class="pb-main">
+          <span class="blind" id="pb-main-flag"></span>
           <div class="pb-main-header">
             <div class="pb-main-header-profile"><img src="./image/기본프로필사진.jpg"></div>
             <div class="pb-main-header-nickname">Winter</div>
@@ -186,7 +187,7 @@ let html = {
           <div class="pb-main-icons">
             <div class="pb-main-icons-inner1">
               <button class="heart-button"><img src="./image/heart.png" class="heart-image"></button>
-              <button id="comment-button"><img src="./image/comment.png"></button>
+              <button class="comment-button"><img src="./image/comment.png"></button>
               <button><img src="./image/direct.png"></button>
             </div>
             <div class="pb-main-icons-inner2"><button><img src="./image/bookmark.png"></button></div>
