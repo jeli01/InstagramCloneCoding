@@ -99,12 +99,11 @@ $heartButton[1].addEventListener('click', () => {                            // 
 })
           
 $modalCommentForm.addEventListener('submit', (e) => {                           // 댓글 달기
+  let commentId;
   e.preventDefault();
   if($modalCommentForm.children[1].children[0].value == '') {
     return;
   }
-
-  commentReplyCommon($modalCommentForm.children[1].children[0].value);
 
   fetch('/main/inputClick', {
     method: "POST",
@@ -116,9 +115,36 @@ $modalCommentForm.addEventListener('submit', (e) => {                           
       value: $modalCommentForm.children[1].children[0].value,
     }),
   })
-  $modalCommentForm.children[1].children[0].value = '';
-  $modalCommentForm.children[1].children[0].focus();
-  
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    commentId = data.id;
+    console.log(commentId);
+    commentReplyCommon($modalCommentForm.children[1].children[0].value,commentId);
+    $modalCommentForm.children[1].children[0].value = '';
+    $modalCommentForm.children[1].children[0].focus();
+    $commentRemove= document.querySelectorAll('.comment-remove');
+
+    for(let k = 0 ; k < $commentRemove.length; k++) {
+      let id = $commentRemove[k].parentNode.children[4].textContent
+      $commentRemove[k].addEventListener('click', () => {                // 댓글 제거!
+        fetch('/main/remove', {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id: id,
+          }),
+        })
+        $commentRemove[k].parentNode.remove();
+      })
+    }
+  })
+
+
+
 })
 
 function commentReplyCommon(append,commentId) {

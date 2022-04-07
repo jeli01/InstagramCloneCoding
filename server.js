@@ -56,7 +56,12 @@ app.post('/main/inputClick', (req,res) => {
     if(err) {
       console.log(err);
     }
-    res.end();
+
+    data = {
+      id : comment.insertId,
+    }
+    res.json(data);
+ 
   })
 })
 
