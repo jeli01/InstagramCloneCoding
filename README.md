@@ -1,4 +1,4 @@
-인스타그램을 똑같이 만들어 보는 프로젝트
+인스타그램을 똑같이 만들어 보는 프로젝트 (개발기간 : 2022.03 ~ 2022.04)
 
 #### [회원가입]
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/7d66458c-273d-438c-a98c-d77a7c99ac9e" />
