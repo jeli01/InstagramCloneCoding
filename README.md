@@ -8,3 +8,6 @@
 
 #### [메인]
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/3f57af13-1f1a-4661-844e-acf615f1a332" />
+
+#### [모달창]
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/30bb38d1-4e56-4d69-b686-f478e88c70e1" />
