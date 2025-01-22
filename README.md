@@ -1,6 +1,6 @@
 인스타그램을 똑같이 만들어 보는 프로젝트 (개발기간 : 2022.03 ~ 2022.04)
 
-스택 : express, mysql
+스택 : HTML, CSS, JavaScript express, mysql
 
 #### [회원가입]
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/7d66458c-273d-438c-a98c-d77a7c99ac9e" />
